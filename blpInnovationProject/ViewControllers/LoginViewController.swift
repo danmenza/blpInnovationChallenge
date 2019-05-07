@@ -9,12 +9,26 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    @IBOutlet public var validUsername: UILabel!
+    @IBOutlet public var validPassword: UILabel!
+    
+    @IBOutlet public var username: UITextField!
+    @IBOutlet public var password: UITextField!
+    
+    @IBOutlet public var locations: UIButton!
+    @IBOutlet public var login: UIButton!
+    @IBOutlet public var thumbprint: UIButton!
+    @IBOutlet public var register: UIButton!
+    @IBOutlet public var terms: UIButton!
+    @IBOutlet public var contactUs: UIButton!
+    
+    @IBOutlet public var iconImage: UIImageView!
+    @IBOutlet public var headerImage: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // adding new viewController
-
         // Do any additional setup after loading the view.
     }
     

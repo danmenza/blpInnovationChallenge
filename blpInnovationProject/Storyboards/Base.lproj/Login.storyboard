@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,10 +18,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Login View Controller-->
+        <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="blpInnovationProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" title="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="blpInnovationProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="6PB-Pi-BAf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,9 +42,6 @@
                                                         <state key="normal" title="Register">
                                                             <color key="titleColor" red="0.70196078431372544" green="0.87058823529411766" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
-                                                        <connections>
-                                                            <action selector="registerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ho-JG-x1D"/>
-                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clZ-Wr-16V">
                                                         <rect key="frame" x="83.5" y="15" width="105" height="26"/>
@@ -53,9 +50,6 @@
                                                         <state key="normal" title="Terms &amp; Conditions">
                                                             <color key="titleColor" red="0.70196078429999997" green="0.87058823529999996" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
-                                                        <connections>
-                                                            <action selector="termsAndConditionsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ZM-GA-MGy"/>
-                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N78-XW-McG">
                                                         <rect key="frame" x="219" y="15" width="61" height="26"/>
@@ -64,9 +58,6 @@
                                                         <state key="normal" title="Contact Us">
                                                             <color key="titleColor" red="0.70196078429999997" green="0.87058823529999996" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
-                                                        <connections>
-                                                            <action selector="ContactUsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pda-IX-Aci"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -82,13 +73,10 @@
                                                                 <state key="normal" title="Locations">
                                                                     <color key="titleColor" red="0.054901960784313725" green="0.66666666666666663" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
-                                                                <connections>
-                                                                    <action selector="secondaryBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DPo-yF-11y"/>
-                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BY9-li-e51" customClass="ActionButton" customModule="blpInnovationProject" customModuleProvider="target">
                                                                 <rect key="frame" x="27" y="12" width="244" height="54"/>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" red="0.054901960784313725" green="0.66666666666666663" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="244" id="9Rf-9k-KUh"/>
                                                                     <constraint firstAttribute="height" constant="54" id="TJP-gh-c4l"/>
@@ -103,12 +91,9 @@
                                                                         <integer key="value" value="5"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="logInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nHw-iD-8Pr"/>
-                                                                </connections>
                                                             </button>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.95686274509803915" green="0.98039215686274506" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstItem="fMe-FI-Wzl" firstAttribute="top" secondItem="BY9-li-e51" secondAttribute="bottom" constant="8" id="2ML-Zs-Ai9"/>
                                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="6pK-wj-Wlq"/>
@@ -234,9 +219,6 @@
                                                             <constraint firstAttribute="height" constant="50" id="o5D-fz-uXh"/>
                                                         </constraints>
                                                         <state key="normal" image="touchID"/>
-                                                        <connections>
-                                                            <action selector="alternativeAuthenticationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Hg-LG-HZQ"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -289,6 +271,7 @@
                                         <viewLayoutGuide key="safeArea" id="e3c-xt-J1u"/>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.054901960784313725" green="0.66666666666666663" blue="0.52549019607843139" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="paj-Vh-AIr" secondAttribute="trailing" id="HhG-P4-0mv"/>
                                     <constraint firstItem="paj-Vh-AIr" firstAttribute="top" secondItem="ABI-5N-QBx" secondAttribute="top" id="Q4W-Ea-3mN"/>
@@ -310,26 +293,23 @@
                         <viewLayoutGuide key="safeArea" id="LVe-q0-S9B"/>
                     </view>
                     <connections>
-                        <outlet property="biometricAuthenticationButton" destination="c29-Dj-Fyz" id="A0O-pD-BJe"/>
-                        <outlet property="checkboxView" destination="4kw-Rd-Ray" id="VlJ-3c-hG7"/>
-                        <outlet property="contactUsButton" destination="N78-XW-McG" id="Zon-x3-iit"/>
-                        <outlet property="contentFooterView" destination="Van-bQ-7ro" id="1oO-7N-r8d"/>
-                        <outlet property="contentView" destination="mj3-N7-tNe" id="9MC-n1-eK8"/>
-                        <outlet property="logInButton" destination="BY9-li-e51" id="BQH-fH-iEB"/>
-                        <outlet property="logoImageView" destination="Qex-md-2Wz" id="H5K-wt-Kvd"/>
-                        <outlet property="passwordErrorLabel" destination="Ghb-V8-813" id="hQM-Et-g7g"/>
-                        <outlet property="passwordField" destination="zOg-BT-JVz" id="4XT-zw-gT5"/>
-                        <outlet property="registerButton" destination="TaH-JO-La4" id="U2r-h6-ZLa"/>
-                        <outlet property="scrollView" destination="ABI-5N-QBx" id="tOJ-kF-JdQ"/>
-                        <outlet property="secondaryButton" destination="fMe-FI-Wzl" id="0Vx-OB-ESg"/>
-                        <outlet property="termsAndConditionsButton" destination="clZ-Wr-16V" id="mfo-1t-tx5"/>
-                        <outlet property="usernameErrorLabel" destination="HOw-mk-Rvr" id="gUv-8E-ggL"/>
-                        <outlet property="usernameField" destination="UzD-MW-q2R" id="fNd-9U-jg1"/>
+                        <outlet property="contactUs" destination="N78-XW-McG" id="J9G-IZ-kEB"/>
+                        <outlet property="headerImage" destination="65H-Dp-VSZ" id="oFp-fD-FoH"/>
+                        <outlet property="iconImage" destination="Qex-md-2Wz" id="eIf-pY-G0m"/>
+                        <outlet property="locations" destination="fMe-FI-Wzl" id="bc8-a0-VJo"/>
+                        <outlet property="login" destination="BY9-li-e51" id="Nfn-Kp-43c"/>
+                        <outlet property="password" destination="zOg-BT-JVz" id="QMI-5r-ncq"/>
+                        <outlet property="register" destination="TaH-JO-La4" id="26O-Jb-5yI"/>
+                        <outlet property="terms" destination="clZ-Wr-16V" id="SNh-Dt-BCH"/>
+                        <outlet property="thumbprint" destination="c29-Dj-Fyz" id="hMZ-0b-iKk"/>
+                        <outlet property="username" destination="UzD-MW-q2R" id="3yg-xX-yXe"/>
+                        <outlet property="validPassword" destination="Ghb-V8-813" id="hyp-H7-Cw8"/>
+                        <outlet property="validUsername" destination="HOw-mk-Rvr" id="PXQ-50-OPk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="100" y="189.90147783251231"/>
+            <point key="canvasLocation" x="99.375" y="189.08450704225353"/>
         </scene>
     </scenes>
     <resources>
