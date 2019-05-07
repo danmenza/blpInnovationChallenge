@@ -13,6 +13,7 @@
 		2DD4297C2281F5FD0003D0B9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD4297A2281F5FD0003D0B9 /* Login.storyboard */; };
 		2DD4298B2281FA920003D0B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4298A2281FA920003D0B9 /* LoginViewController.swift */; };
 		2DD429AD22821DCD0003D0B9 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD429AC22821DCD0003D0B9 /* LaunchScreenViewController.swift */; };
+		2DD429B3228236F20003D0B9 /* FindByLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD429B1228236F20003D0B9 /* FindByLocation.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2DD4297B2281F5FD0003D0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		2DD4298A2281FA920003D0B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2DD429AC22821DCD0003D0B9 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		2DD429B2228236F20003D0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FindByLocation.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		2DD4297F2281F6EF0003D0B9 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				2DD429B1228236F20003D0B9 /* FindByLocation.storyboard */,
 				2DD4297A2281F5FD0003D0B9 /* Login.storyboard */,
 				2DD4296A2281EC830003D0B9 /* LaunchScreen.storyboard */,
 			);
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DD4297C2281F5FD0003D0B9 /* Login.storyboard in Resources */,
+				2DD429B3228236F20003D0B9 /* FindByLocation.storyboard in Resources */,
 				2DD4296C2281EC830003D0B9 /* LaunchScreen.storyboard in Resources */,
 				2DD429692281EC830003D0B9 /* Assets.xcassets in Resources */,
 			);
@@ -177,6 +181,14 @@
 				2DD4297B2281F5FD0003D0B9 /* Base */,
 			);
 			name = Login.storyboard;
+			sourceTree = "<group>";
+		};
+		2DD429B1228236F20003D0B9 /* FindByLocation.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DD429B2228236F20003D0B9 /* Base */,
+			);
+			name = FindByLocation.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
