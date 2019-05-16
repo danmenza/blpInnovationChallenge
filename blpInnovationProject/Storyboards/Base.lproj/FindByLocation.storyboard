@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TXn-iS-xqD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,36 +10,39 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--FindByLocation-->
         <scene sceneID="MRR-lC-meT">
             <objects>
-                <viewController id="TXn-iS-xqD" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FindByLocationViewController" title="FindByLocation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TXn-iS-xqD" customClass="FindByLocationViewController" customModule="blpInnovationProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="npb-f2-4Rh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="magnifyingGlass" translatesAutoresizingMaskIntoConstraints="NO" id="Oft-62-akF">
-                                <rect key="frame" x="167" y="83" width="40" height="49"/>
+                                <rect key="frame" x="167" y="179" width="40" height="49"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bse-jq-uq5">
-                                <rect key="frame" x="112" y="294" width="150" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bse-jq-uq5">
+                                <rect key="frame" x="117.5" y="379" width="140" height="32"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Search By Location">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZY-IG-3P3">
-                                <rect key="frame" x="112" y="434" width="150" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZY-IG-3P3">
+                                <rect key="frame" x="114" y="523" width="147" height="32"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Search by Symptom">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="TapSearchSymptom" destination="TXn-iS-xqD" eventType="touchUpInside" id="VLh-ur-b2R"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qmj-uC-4rc">
-                                <rect key="frame" x="112" y="363" width="150" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qmj-uC-4rc">
+                                <rect key="frame" x="127" y="451" width="121" height="32"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,31 +51,72 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="How would you like to search?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVU-4V-mbq">
-                                <rect key="frame" x="25" y="203" width="324" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How would you like to search?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVU-4V-mbq">
+                                <rect key="frame" x="25" y="264" width="324" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" backIndicatorImage="arrowNormal" translatesAutoresizingMaskIntoConstraints="NO" id="aNA-Re-mHc">
+                                <rect key="frame" x="0.0" y="26" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="FIND A LOCATION" id="JFR-bj-765">
+                                        <barButtonItem key="backBarButtonItem" title="Back" id="m6A-sv-ZiC"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="di3-DN-WfZ">
+                                <rect key="frame" x="0.0" y="100" width="182.5" height="30"/>
+                                <state key="normal" title="SEARCH"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0T-bX-QTe">
+                                <rect key="frame" x="192.5" y="100" width="182.5" height="30"/>
+                                <state key="normal" title="FAVORITES"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="U4U-xO-aIy" firstAttribute="trailing" secondItem="Oft-62-akF" secondAttribute="trailing" constant="68" id="Ba4-A1-4HC"/>
-                            <constraint firstItem="Oft-62-akF" firstAttribute="leading" secondItem="U4U-xO-aIy" secondAttribute="leading" constant="67" id="MXq-MW-j0a"/>
-                            <constraint firstItem="MZY-IG-3P3" firstAttribute="top" secondItem="Qmj-uC-4rc" secondAttribute="bottom" constant="41" id="N4s-PF-Qlt"/>
-                            <constraint firstItem="CVU-4V-mbq" firstAttribute="top" secondItem="Oft-62-akF" secondAttribute="bottom" constant="57" id="Qc0-CW-iIH"/>
-                            <constraint firstItem="Oft-62-akF" firstAttribute="top" secondItem="U4U-xO-aIy" secondAttribute="top" constant="28" id="VSQ-J2-2h2"/>
-                            <constraint firstItem="Qmj-uC-4rc" firstAttribute="top" secondItem="Bse-jq-uq5" secondAttribute="bottom" constant="-52" id="x9b-7d-yf4"/>
+                            <constraint firstItem="U4U-xO-aIy" firstAttribute="trailing" secondItem="aNA-Re-mHc" secondAttribute="trailing" id="484-eY-zYT"/>
+                            <constraint firstItem="Bse-jq-uq5" firstAttribute="centerX" secondItem="U4U-xO-aIy" secondAttribute="centerX" id="5Bc-QB-xyM"/>
+                            <constraint firstItem="Bse-jq-uq5" firstAttribute="top" secondItem="CVU-4V-mbq" secondAttribute="bottom" constant="50" id="8kg-ws-6nw"/>
+                            <constraint firstItem="di3-DN-WfZ" firstAttribute="leading" secondItem="U4U-xO-aIy" secondAttribute="leading" id="9IV-Df-IfO"/>
+                            <constraint firstItem="u0T-bX-QTe" firstAttribute="leading" secondItem="di3-DN-WfZ" secondAttribute="trailing" constant="10" id="AsU-lg-um3"/>
+                            <constraint firstItem="di3-DN-WfZ" firstAttribute="width" secondItem="u0T-bX-QTe" secondAttribute="width" id="J1i-dj-KVF"/>
+                            <constraint firstItem="aNA-Re-mHc" firstAttribute="leading" secondItem="U4U-xO-aIy" secondAttribute="leading" id="Lz0-LL-jI5"/>
+                            <constraint firstItem="MZY-IG-3P3" firstAttribute="top" secondItem="Qmj-uC-4rc" secondAttribute="bottom" constant="40" id="N4s-PF-Qlt"/>
+                            <constraint firstItem="CVU-4V-mbq" firstAttribute="top" secondItem="Oft-62-akF" secondAttribute="bottom" constant="80" id="Qc0-CW-iIH"/>
+                            <constraint firstItem="Oft-62-akF" firstAttribute="top" secondItem="U4U-xO-aIy" secondAttribute="top" constant="150" id="VSQ-J2-2h2"/>
+                            <constraint firstItem="CVU-4V-mbq" firstAttribute="centerX" secondItem="U4U-xO-aIy" secondAttribute="centerX" id="bf3-xd-waI"/>
+                            <constraint firstItem="Oft-62-akF" firstAttribute="centerX" secondItem="U4U-xO-aIy" secondAttribute="centerX" id="k9C-li-JtX"/>
+                            <constraint firstItem="MZY-IG-3P3" firstAttribute="centerX" secondItem="U4U-xO-aIy" secondAttribute="centerX" id="krD-IF-Zte"/>
+                            <constraint firstItem="di3-DN-WfZ" firstAttribute="top" secondItem="aNA-Re-mHc" secondAttribute="bottom" constant="30" id="kxT-xA-TXR"/>
+                            <constraint firstItem="Oft-62-akF" firstAttribute="top" secondItem="u0T-bX-QTe" secondAttribute="bottom" constant="40" id="p3S-aE-eVB"/>
+                            <constraint firstItem="u0T-bX-QTe" firstAttribute="top" secondItem="aNA-Re-mHc" secondAttribute="bottom" constant="30" id="rvb-2q-Qij"/>
+                            <constraint firstItem="Qmj-uC-4rc" firstAttribute="centerX" secondItem="U4U-xO-aIy" secondAttribute="centerX" id="teS-Ii-L9w"/>
+                            <constraint firstItem="Qmj-uC-4rc" firstAttribute="top" secondItem="Bse-jq-uq5" secondAttribute="bottom" constant="40" id="x9b-7d-yf4"/>
+                            <constraint firstItem="U4U-xO-aIy" firstAttribute="trailing" secondItem="u0T-bX-QTe" secondAttribute="trailing" id="xhd-Cz-Oad"/>
+                            <constraint firstItem="Oft-62-akF" firstAttribute="top" secondItem="di3-DN-WfZ" secondAttribute="bottom" constant="40" id="zfX-v7-Gpa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="U4U-xO-aIy"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="m6A-sv-ZiC" id="lKp-zg-aeW"/>
+                        <outlet property="favoritesTab" destination="u0T-bX-QTe" id="72f-NF-YI1"/>
+                        <outlet property="magnifyImage" destination="Oft-62-akF" id="fuF-wS-FDh"/>
+                        <outlet property="searchLocation" destination="Bse-jq-uq5" id="XSx-cP-qKE"/>
+                        <outlet property="searchName" destination="Qmj-uC-4rc" id="hfe-B6-pTf"/>
+                        <outlet property="searchSymptom" destination="MZY-IG-3P3" id="L8c-vm-LWK"/>
+                        <outlet property="searchTab" destination="di3-DN-WfZ" id="KM7-rl-XeD"/>
+                        <outlet property="searchTitle" destination="CVU-4V-mbq" id="hdd-MC-DoM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T2d-dV-Myv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-192.80000000000001" y="723.68815592203907"/>
+            <point key="canvasLocation" x="-30492" y="816"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrowNormal" width="44" height="44"/>
         <image name="magnifyingGlass" width="40" height="49"/>
     </resources>
 </document>
