@@ -29,6 +29,10 @@ open class SymptomFormViewController: UIViewController, UITableViewDelegate, UIT
     public var symptomsList = Symptoms()
     public var symptomImage: UIImage!
     
+    public var yearOfBirth: Int!
+    public var gender: String!
+    public var userSymptoms = [String]()
+    
     public var checked = UIImage(named: "svgRadioBtn")
     public var unchecked = UIImage(named: "svgCheckbox")
     public var logoImage = UIImage(named: "careCreditMarkRevWithShadow")
@@ -36,6 +40,14 @@ open class SymptomFormViewController: UIViewController, UITableViewDelegate, UIT
     override open func viewDidLoad() {
         super.viewDidLoad()
         logo.image = logoImage
+    }
+    
+    @IBAction public func didSelectSymptomSearch() {
+        let bornInt = Int(bornField.text!)
+        yearOfBirth = bornInt
+        gender = genderField.text
+        
+        
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,9 +69,12 @@ open class SymptomFormViewController: UIViewController, UITableViewDelegate, UIT
         let cell = tableView.cellForRow(at: indexPath) as! SymptomsCell
         cell.selectionStyle = .none
         if cell.symptomSelected.image == unchecked {
+            let symptom = symptomsList.symptomsArray[indexPath.row]
             cell.symptomSelected.image = checked
+            userSymptoms.append(symptom)
         } else {
             cell.symptomSelected.image = unchecked
+            userSymptoms.remove(at: indexPath.row)
         }
     }
 }

@@ -9,5 +9,14 @@
 import Foundation
 
 open class Symptoms {
-    public let symptomsArray = ["Tooth ache", "Hallucinations", "Eye redness + irritation", "Bone fracture", "Ear ache", "Fever", "Sore throat", "Skin redness", "Blackheads", "Dry mouth"]
+    public let symptomsDict = ["Toothache": 1008,
+                                "Hallucination": 976,
+                                "Eye redness": 33,
+                                "Bone fracture": 156,
+                                "Earache": 87,
+                                "Fever": 11,
+                                "Sore throat": 13,
+                                "Skin redness": 61,
+                                "Blackhead": 24,
+                                "Dry mouth": 272]
 }
