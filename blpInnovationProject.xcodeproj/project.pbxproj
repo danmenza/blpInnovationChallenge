@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2DB8B1FA2284BCC200B32332 /* Symptoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB8B1F92284BCC200B32332 /* Symptoms.swift */; };
+		2D45C1D22294A3AE0006CFB2 /* Symptom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D45C1D12294A3AE0006CFB2 /* Symptom.swift */; };
 		2DD429602281EC820003D0B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4295F2281EC820003D0B9 /* AppDelegate.swift */; };
 		2DD429692281EC830003D0B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DD429682281EC830003D0B9 /* Assets.xcassets */; };
 		2DD4296C2281EC830003D0B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD4296A2281EC830003D0B9 /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2DB8B1F92284BCC200B32332 /* Symptoms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symptoms.swift; sourceTree = "<group>"; };
+		2D45C1D12294A3AE0006CFB2 /* Symptom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symptom.swift; sourceTree = "<group>"; };
 		2DD4295C2281EC820003D0B9 /* blpInnovationProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blpInnovationProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD4295F2281EC820003D0B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DD429682281EC830003D0B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 				2DD429802281F7080003D0B9 /* ViewControllers */,
 				2DD4297F2281F6EF0003D0B9 /* Storyboards */,
 				2DD4295F2281EC820003D0B9 /* AppDelegate.swift */,
-				2DB8B1F92284BCC200B32332 /* Symptoms.swift */,
+				2D45C1D12294A3AE0006CFB2 /* Symptom.swift */,
 				2DD429682281EC830003D0B9 /* Assets.xcassets */,
 				2DD4296D2281EC830003D0B9 /* Info.plist */,
 			);
@@ -176,9 +176,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DD4298B2281FA920003D0B9 /* LoginViewController.swift in Sources */,
+				2D45C1D22294A3AE0006CFB2 /* Symptom.swift in Sources */,
 				2DD429B5228237CA0003D0B9 /* FindByLocationViewController.swift in Sources */,
 				2DD429AD22821DCD0003D0B9 /* LaunchScreenViewController.swift in Sources */,
-				2DB8B1FA2284BCC200B32332 /* Symptoms.swift in Sources */,
 				2DD429BA22837B530003D0B9 /* SymptomFormViewController.swift in Sources */,
 				2DD429602281EC820003D0B9 /* AppDelegate.swift in Sources */,
 			);

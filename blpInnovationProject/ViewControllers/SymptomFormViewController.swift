@@ -26,12 +26,12 @@ open class SymptomFormViewController: UIViewController, UITableViewDelegate, UIT
     @IBOutlet public var tableView: UITableView!
     
     public var imageToggle: Bool = false
-    public var symptomsList = Symptoms()
+    public var symptomsList = SymptomProvider.masterList
     public var symptomImage: UIImage!
     
     public var yearOfBirth: Int!
     public var gender: String!
-    public var userSymptoms = [String]()
+    public var userSymptoms = [Int]()
     
     public var checked = UIImage(named: "svgRadioBtn")
     public var unchecked = UIImage(named: "svgCheckbox")
@@ -46,8 +46,25 @@ open class SymptomFormViewController: UIViewController, UITableViewDelegate, UIT
         let bornInt = Int(bornField.text!)
         yearOfBirth = bornInt
         gender = genderField.text
+        let encodedArray = "\(userSymptoms)".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhbi5tZW56YUBzeWYuY29tIiwicm9sZSI6IlVzZXIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiIyNDM0IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy92ZXJzaW9uIjoiMTA5IiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9saW1pdCI6IjEwMCIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbWVtYmVyc2hpcCI6IkJhc2ljIiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9sYW5ndWFnZSI6ImVuLWdiIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9leHBpcmF0aW9uIjoiMjA5OS0xMi0zMSIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbWVtYmVyc2hpcHN0YXJ0IjoiMjAxOS0wNS0xNiIsImlzcyI6Imh0dHBzOi8vYXV0aHNlcnZpY2UucHJpYWlkLmNoIiwiYXVkIjoiaHR0cHM6Ly9oZWFsdGhzZXJ2aWNlLnByaWFpZC5jaCIsImV4cCI6MTU1ODU0NTUwNiwibmJmIjoxNTU4NTM4MzA2fQ.8cENt-O7nO6w2W2g-oGqaif9HHIMnTYbnFjCeoDwRfA"
         
-        
+        let urlString = URL(string: "https://healthservice.priaid.ch/diagnosis?token=\(token)&symptoms=\(encodedArray!)&gender=\(gender!)&year_of_birth=\(yearOfBirth!)&language=en-gb")
+
+        if  let url = urlString {
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if error != nil {
+                    print("error occurred")
+                } else {
+                    if let usableData = data {
+                        let jsonDecoder = JSONDecoder()
+                        let json = JSONDecoder.decode(<#T.Type#>, from: usableData)
+                        print(json) //JSONSerialization
+                    }
+                }
+            }
+            task.resume()
+        }
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,7 +74,8 @@ open class SymptomFormViewController: UIViewController, UITableViewDelegate, UIT
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "symptomCell") as! SymptomsCell
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-        cell.symptom.text = symptomsList.symptomsArray[indexPath.row]
+        let symptom = symptomsList[indexPath.row]
+        cell.symptom.text = symptom.displayName
         cell.symptomSelected.image = unchecked
         tableView.delegate = self
         tableView.dataSource = self
@@ -69,7 +87,7 @@ open class SymptomFormViewController: UIViewController, UITableViewDelegate, UIT
         let cell = tableView.cellForRow(at: indexPath) as! SymptomsCell
         cell.selectionStyle = .none
         if cell.symptomSelected.image == unchecked {
-            let symptom = symptomsList.symptomsArray[indexPath.row]
+            let symptom = symptomsList[indexPath.row].id
             cell.symptomSelected.image = checked
             userSymptoms.append(symptom)
         } else {
@@ -78,3 +96,4 @@ open class SymptomFormViewController: UIViewController, UITableViewDelegate, UIT
         }
     }
 }
+
