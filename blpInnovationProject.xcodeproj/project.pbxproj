@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2DB8B1FA2284BCC200B32332 /* Symptoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB8B1F92284BCC200B32332 /* Symptoms.swift */; };
+		2D45C1D22294A3AE0006CFB2 /* Symptom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D45C1D12294A3AE0006CFB2 /* Symptom.swift */; };
+		2DCD5E0A229DE1EA00047B00 /* CCProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD5E09229DE1EA00047B00 /* CCProviders.swift */; };
+		2DCD5E0C229DE41000047B00 /* Locations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DCD5E0B229DE41000047B00 /* Locations.storyboard */; };
+		2DCD5E10229DE52700047B00 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD5E0F229DE52700047B00 /* LocationsViewController.swift */; };
 		2DD429602281EC820003D0B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4295F2281EC820003D0B9 /* AppDelegate.swift */; };
 		2DD429692281EC830003D0B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DD429682281EC830003D0B9 /* Assets.xcassets */; };
 		2DD4296C2281EC830003D0B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD4296A2281EC830003D0B9 /* LaunchScreen.storyboard */; };
@@ -18,11 +21,13 @@
 		2DD429B5228237CA0003D0B9 /* FindByLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD429B4228237CA0003D0B9 /* FindByLocationViewController.swift */; };
 		2DD429B822837B0B0003D0B9 /* SymptomForm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD429B722837B0B0003D0B9 /* SymptomForm.storyboard */; };
 		2DD429BA22837B530003D0B9 /* SymptomFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD429B922837B530003D0B9 /* SymptomFormViewController.swift */; };
-		2DE50442228C70C9006AF649 /* ProviderList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE50441228C70C9006AF649 /* ProviderList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2DB8B1F92284BCC200B32332 /* Symptoms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symptoms.swift; sourceTree = "<group>"; };
+		2D45C1D12294A3AE0006CFB2 /* Symptom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symptom.swift; sourceTree = "<group>"; };
+		2DCD5E09229DE1EA00047B00 /* CCProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCProviders.swift; sourceTree = "<group>"; };
+		2DCD5E0B229DE41000047B00 /* Locations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Locations.storyboard; sourceTree = "<group>"; };
+		2DCD5E0F229DE52700047B00 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		2DD4295C2281EC820003D0B9 /* blpInnovationProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blpInnovationProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD4295F2281EC820003D0B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DD429682281EC830003D0B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,7 +40,6 @@
 		2DD429B4228237CA0003D0B9 /* FindByLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindByLocationViewController.swift; sourceTree = "<group>"; };
 		2DD429B722837B0B0003D0B9 /* SymptomForm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SymptomForm.storyboard; sourceTree = "<group>"; };
 		2DD429B922837B530003D0B9 /* SymptomFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomFormViewController.swift; sourceTree = "<group>"; };
-		2DE50441228C70C9006AF649 /* ProviderList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProviderList.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +75,8 @@
 				2DD429802281F7080003D0B9 /* ViewControllers */,
 				2DD4297F2281F6EF0003D0B9 /* Storyboards */,
 				2DD4295F2281EC820003D0B9 /* AppDelegate.swift */,
-				2DB8B1F92284BCC200B32332 /* Symptoms.swift */,
+				2D45C1D12294A3AE0006CFB2 /* Symptom.swift */,
+				2DCD5E09229DE1EA00047B00 /* CCProviders.swift */,
 				2DD429682281EC830003D0B9 /* Assets.xcassets */,
 				2DD4296D2281EC830003D0B9 /* Info.plist */,
 			);
@@ -85,7 +90,7 @@
 				2DD4297A2281F5FD0003D0B9 /* Login.storyboard */,
 				2DD4296A2281EC830003D0B9 /* LaunchScreen.storyboard */,
 				2DD429B722837B0B0003D0B9 /* SymptomForm.storyboard */,
-				2DE50441228C70C9006AF649 /* ProviderList.storyboard */,
+				2DCD5E0B229DE41000047B00 /* Locations.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -97,6 +102,7 @@
 				2DD429AC22821DCD0003D0B9 /* LaunchScreenViewController.swift */,
 				2DD429B4228237CA0003D0B9 /* FindByLocationViewController.swift */,
 				2DD429B922837B530003D0B9 /* SymptomFormViewController.swift */,
+				2DCD5E0F229DE52700047B00 /* LocationsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -162,7 +168,7 @@
 				2DD4297C2281F5FD0003D0B9 /* Login.storyboard in Resources */,
 				2DD429B822837B0B0003D0B9 /* SymptomForm.storyboard in Resources */,
 				2DD429B3228236F20003D0B9 /* FindByLocation.storyboard in Resources */,
-				2DE50442228C70C9006AF649 /* ProviderList.storyboard in Resources */,
+				2DCD5E0C229DE41000047B00 /* Locations.storyboard in Resources */,
 				2DD4296C2281EC830003D0B9 /* LaunchScreen.storyboard in Resources */,
 				2DD429692281EC830003D0B9 /* Assets.xcassets in Resources */,
 			);
@@ -176,9 +182,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DD4298B2281FA920003D0B9 /* LoginViewController.swift in Sources */,
+				2DCD5E0A229DE1EA00047B00 /* CCProviders.swift in Sources */,
+				2D45C1D22294A3AE0006CFB2 /* Symptom.swift in Sources */,
+				2DCD5E10229DE52700047B00 /* LocationsViewController.swift in Sources */,
 				2DD429B5228237CA0003D0B9 /* FindByLocationViewController.swift in Sources */,
 				2DD429AD22821DCD0003D0B9 /* LaunchScreenViewController.swift in Sources */,
-				2DB8B1FA2284BCC200B32332 /* Symptoms.swift in Sources */,
 				2DD429BA22837B530003D0B9 /* SymptomFormViewController.swift in Sources */,
 				2DD429602281EC820003D0B9 /* AppDelegate.swift in Sources */,
 			);
