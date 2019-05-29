@@ -25,6 +25,7 @@ open class SymptomFormViewController: UIViewController, UITableViewDelegate, UIT
     
     @IBOutlet public var tableView: UITableView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     public var imageToggle: Bool = false
     public var symptomsList = SymptomProvider.masterList
     public var symptomImage: UIImage!
@@ -40,6 +41,8 @@ open class SymptomFormViewController: UIViewController, UITableViewDelegate, UIT
     override open func viewDidLoad() {
         super.viewDidLoad()
         logo.image = logoImage
+        
+        scrollView.contentSize = CGSize(width: 640, height: 800)
     }
     
     @IBAction public func didSelectSymptomSearch() {
