@@ -13,7 +13,6 @@
         <!--Locations-->
         <scene sceneID="3qw-aa-QtU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CnP-hr-ZbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="LocationsViewController" title="Locations" id="HDc-xB-E1n" customClass="LocationsViewController" customModule="blpInnovationProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wM7-ds-Glf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -38,21 +37,24 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBd-q2-Wsa">
-                                                    <rect key="frame" x="20" y="10" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="20" y="10" width="52" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDn-FZ-DkG">
-                                                    <rect key="frame" x="20" y="41" width="42" height="21"/>
+                                                    <rect key="frame" x="20" y="44" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oY-p3-Bn4">
-                                                    <rect key="frame" x="20" y="72" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="20" y="75" width="250" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="250" id="c3S-lD-AUZ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" red="0.39708611369132996" green="0.66034168004989624" blue="0.53331851959228516" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oec-40-9Rg">
@@ -63,7 +65,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fll-ID-4Qu">
-                                                    <rect key="frame" x="303" y="72" width="42" height="21"/>
+                                                    <rect key="frame" x="303" y="75" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -84,6 +86,9 @@
                                                 <constraint firstItem="Fll-ID-4Qu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7oY-p3-Bn4" secondAttribute="trailing" constant="5" id="w6J-O2-8YW"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="7oY-p3-Bn4" secondAttribute="bottom" constant="4" id="cam-SI-tKU"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="arrow" destination="oec-40-9Rg" id="pBI-Im-epz"/>
                                             <outlet property="distance" destination="Fll-ID-4Qu" id="knw-bS-aaD"/>
@@ -113,6 +118,7 @@
                         <outlet property="tableView" destination="6Vx-ff-dmN" id="fhU-iI-nT0"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CnP-hr-ZbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="141.59999999999999" y="24.7376311844078"/>
         </scene>

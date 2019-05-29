@@ -20,27 +20,31 @@ open class LocationsViewController: UIViewController, UITableViewDelegate, UITab
         
     @IBOutlet weak var searchResults: UINavigationBar!
     @IBOutlet public var tableView: UITableView!
+    
+    public var locationList = LocationsList.masterList
+
     override open func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 5
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 125
     }
     
     
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell") as! LocationCell
-        cell.practiceName.text = "test"
-        cell.type.text = "label1"
-        cell.location.text = "label2"
-        cell.distance.text = "2.0 Miles"
+        cell.practiceName.text = locationList[indexPath.row].practiceName
+        cell.type.text = locationList[indexPath.row].doctor
+        cell.location.text = locationList[indexPath.row].location
+        cell.location.numberOfLines = 0
+        cell.distance.text = locationList[indexPath.row].distance
         cell.arrow.image = UIImage(named: "arrowNormal")
         return cell
     }
