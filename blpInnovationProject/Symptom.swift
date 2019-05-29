@@ -29,3 +29,9 @@ enum SymptomProvider {
                                          Symptom(displayName: "Blackhead", id: 24),
                                          Symptom(displayName: "Dry mouth", id: 272)]
 }
+
+//struct diagnosisResponse: Codable {
+//    <#fields#>
+//}
+
+///https://dwww.carecredit.com/doctor-locator/service/NativeApp.php?Lat=41.0411194&Long=-73.541744&Radius=5&Profession=129&Specialty%5B%5D=171&Page=1&Sort=D
