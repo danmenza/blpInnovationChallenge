@@ -57,14 +57,21 @@ open class SymptomFormViewController: UIViewController, UITableViewDelegate, UIT
                     print("error occurred")
                 } else {
                     if let usableData = data {
-                        let jsonDecoder = JSONDecoder()
-                        let json = JSONDecoder.decode(<#T.Type#>, from: usableData)
-                        print(json) //JSONSerialization
+//                        let jsonDecode = JSONDecoder()
+//                        let json = jsonDecode.decode(<#T.Type#>, from: usableData)
+//                        print(json) //JSONSerialization
                     }
                 }
             }
             task.resume()
         }
+        tapSelectSymptomSearch()
+    }
+    
+    public func tapSelectSymptomSearch() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Locations", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "LocationsViewController")
+        self.present(newViewController, animated: true, completion: nil)
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
