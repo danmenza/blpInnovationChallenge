@@ -43,6 +43,14 @@ open class SymptomFormViewController: UIViewController, UITableViewDelegate, UIT
         logo.image = logoImage
         scrollView.contentSize = CGSize(width: scrollView.contentSize.width, height: scrollView.contentSize.height)
         scrollView.isScrollEnabled = true
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction public func didSelectSymptomSearch() {
