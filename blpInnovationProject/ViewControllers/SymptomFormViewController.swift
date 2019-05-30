@@ -24,6 +24,7 @@ open class SymptomFormViewController: UIViewController, UITableViewDelegate, UIT
     @IBOutlet public var logo: UIImageView!
     
     @IBOutlet public var tableView: UITableView!
+    @IBOutlet public var scrollView: UIScrollView!
     
     public var imageToggle: Bool = false
     public var symptomsList = SymptomProvider.masterList
@@ -40,6 +41,8 @@ open class SymptomFormViewController: UIViewController, UITableViewDelegate, UIT
     override open func viewDidLoad() {
         super.viewDidLoad()
         logo.image = logoImage
+        scrollView.contentSize = CGSize(width: scrollView.contentSize.width, height: scrollView.contentSize.height)
+        scrollView.isScrollEnabled = true
     }
     
     @IBAction public func didSelectSymptomSearch() {
@@ -47,7 +50,7 @@ open class SymptomFormViewController: UIViewController, UITableViewDelegate, UIT
         yearOfBirth = bornInt
         gender = genderField.text
         let encodedArray = "\(userSymptoms)".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
-        let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhbi5tZW56YUBzeWYuY29tIiwicm9sZSI6IlVzZXIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiIyNDM0IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy92ZXJzaW9uIjoiMTA5IiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9saW1pdCI6IjEwMCIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbWVtYmVyc2hpcCI6IkJhc2ljIiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9sYW5ndWFnZSI6ImVuLWdiIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9leHBpcmF0aW9uIjoiMjA5OS0xMi0zMSIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbWVtYmVyc2hpcHN0YXJ0IjoiMjAxOS0wNS0xNiIsImlzcyI6Imh0dHBzOi8vYXV0aHNlcnZpY2UucHJpYWlkLmNoIiwiYXVkIjoiaHR0cHM6Ly9oZWFsdGhzZXJ2aWNlLnByaWFpZC5jaCIsImV4cCI6MTU1ODU0NTUwNiwibmJmIjoxNTU4NTM4MzA2fQ.8cENt-O7nO6w2W2g-oGqaif9HHIMnTYbnFjCeoDwRfA"
+        let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhbi5tZW56YUBzeWYuY29tIiwicm9sZSI6IlVzZXIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiIyNDM0IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy92ZXJzaW9uIjoiMTA5IiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9saW1pdCI6IjEwMCIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbWVtYmVyc2hpcCI6IkJhc2ljIiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9sYW5ndWFnZSI6ImVuLWdiIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9leHBpcmF0aW9uIjoiMjA5OS0xMi0zMSIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbWVtYmVyc2hpcHN0YXJ0IjoiMjAxOS0wNS0xNiIsImlzcyI6Imh0dHBzOi8vYXV0aHNlcnZpY2UucHJpYWlkLmNoIiwiYXVkIjoiaHR0cHM6Ly9oZWFsdGhzZXJ2aWNlLnByaWFpZC5jaCIsImV4cCI6MTU1OTE3MTk4NCwibmJmIjoxNTU5MTY0Nzg0fQ.zpqVdwqRMxuEHgH_unoLMQTYDyooywzBd04hH2rD-Kw"
         
         let urlString = URL(string: "https://healthservice.priaid.ch/diagnosis?token=\(token)&symptoms=\(encodedArray!)&gender=\(gender!)&year_of_birth=\(yearOfBirth!)&language=en-gb")
 
@@ -57,9 +60,13 @@ open class SymptomFormViewController: UIViewController, UITableViewDelegate, UIT
                     print("error occurred")
                 } else {
                     if let usableData = data {
-//                        let jsonDecode = JSONDecoder()
-//                        let json = jsonDecode.decode(<#T.Type#>, from: usableData)
-//                        print(json) //JSONSerialization
+                        do {
+                            let jsonDecode = JSONDecoder()
+                            let json = try jsonDecode.decode([DiagnosisResponse].self, from: usableData)
+                            
+                        } catch {
+                            print(error.localizedDescription)
+                        }
                     }
                 }
             }
