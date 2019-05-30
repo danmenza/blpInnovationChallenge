@@ -43,6 +43,7 @@ open class SymptomFormViewController: UIViewController, UITableViewDelegate, UIT
         logo.image = logoImage
         
         scrollView.contentSize = CGSize(width: 640, height: 800)
+        scrollView.keyboardDismissMode = .onDrag
     }
     
     @IBAction public func didSelectSymptomSearch() {
